@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout}">
+
+<head>
+    <title>DGB - Article Management System</title>
+</head>
+
+<body>
+    <!--Main layout-->
+    <main>
+        <div layout:fragment="Content">
+            
+            <section class="my-5 p-1" >
+
+                <h2 class="h1 text-center my-5 font-weight-bold">Our Categories</h2>
+
+                <div class="row">
+
+                    <div class="col-md-4 mt-3" th:each="category: ${categories}" th:object="${category}">
+                        <a class="btn btn-category cloudy-knoxville-gradient">
+                            <i class="fa fa-folder fa-3x" aria-hidden="true"></i>
+                            <span th:text="*{name}">Fashion</span>
+                        </a>
+                    </div>
+
+
+
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+    <!--Main layout-->
+
+    <th:block layout:fragment="scripts">
+        <script src="/js/category.js"></script>
+    </th:block>
+</body>
+
+</html>
