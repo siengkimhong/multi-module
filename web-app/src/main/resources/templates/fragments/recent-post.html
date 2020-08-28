@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section th:fragment="Recently-Post" class="mt-5 wow fadeIn">
+
+    <h2 class="h1 text-left my-5 font-weight-bold">Recently Post</h2>
+
+    <!--Grid row-->
+    <div class="row">
+        <div class="col-md-4" th:each="recentArticle: ${recentArticles}" th:object="${recentArticle}">
+            <!--Zoom effect-->
+            <div class="view overlay zoom">
+                <img th:src="@{/images/{name}(name=*{thumbnail})" class="img-fluid "
+                     alt="zoom">
+                <div class="mask flex-center waves-effect waves-light pl-2 pr-2">
+                    <p class="white-text text-center font-weight-bold" th:text="*{title}">Title</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+</body>
+</html>

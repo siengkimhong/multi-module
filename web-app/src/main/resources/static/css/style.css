@@ -1,0 +1,81 @@
+html, body, header, .carousel {
+    height: 60vh;
+}
+
+@media (max-width: 740px) {
+    html, body, header, .carousel {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    html, body, header, .carousel {
+        height: 100vh;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #1C2331!important;
+    }
+}
+
+.view.slide, body, html {
+    height: 100%
+}
+
+@media (max-width:740px) {
+    .full-page-intro {
+        height: 1000px
+    }
+}
+
+.carousel {
+    height: 60%
+}
+
+.carousel .carousel-inner, .carousel .carousel-inner .active, .carousel .carousel-inner .carousel-item {
+    height: 100%
+}
+
+@media (max-width:776px) {
+    .carousel {
+        height: 100%
+    }
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, .3)
+}
+
+.page-footer, .top-nav-collapse {
+    background-color: #1C2331
+}
+
+@media only screen and (max-width:768px) {
+    .navbar {
+        background-color: #1C2331
+    }
+}
+
+.top-article {
+    margin-top:100px;
+}
+
+.article-title:hover {
+    text-decoration: underline !important;
+}
+
+.btn-category {
+    font-weight: bold;
+    font-size: 20px;
+    color:#1c2331 !important;
+    height: 200px;
+    width: 100%;
+
+    /* Flex */
+    display: flex !important;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,11 @@
+<h2 class="h1 text-left my-5 font-weight-bold">Related Categories</h2>
+
+<div class="row mb-5" xmlns:th="http://www.thymeleaf.org">
+    <div class="col-md-12">
+
+        <button type="button" class="btn btn-mdb-color"
+                th:each="category:${categories}"
+                th:text="${category.name}">Category Name</button>
+
+    </div>
+</div>
